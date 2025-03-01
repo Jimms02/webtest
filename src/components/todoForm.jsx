@@ -43,7 +43,7 @@ export default function todoForm({ addTodo }) {
 
   return (
     <div>
-      <h2>Add New Todo</h2>
+      <h2>Add New To-do item</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="activity">Activity:</label>
@@ -78,15 +78,15 @@ export default function todoForm({ addTodo }) {
             onChange={handleChange}
             required 
           >
-            <option value="education">Education</option>
-            <option value="recreational">Recreational</option>
-            <option value="social">Social</option>
-            <option value="diy">DIY</option>
-            <option value="charity">Charity</option>
-            <option value="cooking">Cooking</option>
-            <option value="relaxation">Relaxation</option>
-            <option value="music">Music</option>
-            <option value="busywork">Busywork</option>
+            <option value="Education">Education</option>
+            <option value="Recreational">Recreational</option>
+            <option value="Social">Social</option>
+            <option value="Diy">DIY</option>
+            <option value="Charity">Charity</option>
+            <option value="Cooking">Cooking</option>
+            <option value="Relaxation">Relaxation</option>
+            <option value="Music">Music</option>
+            <option value="Busywork">Busywork</option>
           </select>
         </div>
         
