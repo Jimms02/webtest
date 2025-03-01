@@ -43,7 +43,7 @@ export default function todoForm({ addTodo }) {
 
   return (
     <div>
-      <h2>Add New To-do item</h2>
+      <h2>Add New To-Do item</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="activity">Activity:</label>

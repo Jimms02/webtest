@@ -1,7 +1,6 @@
 .container {
   --gray-rgb: 0, 0, 0;
 
-  display: grid;
   align-items: start;
   justify-items: center;
   min-height: 80vh;

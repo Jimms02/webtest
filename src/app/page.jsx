@@ -18,11 +18,12 @@ function Home() {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
-
+  // add todo item to list
   const addTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
   };
 
+  // removes todo item to list
   const deleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
