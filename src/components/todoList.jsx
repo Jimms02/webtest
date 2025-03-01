@@ -4,6 +4,7 @@ import styles from './todoList.module.css'
 export default function TodoList({ todos, deleteTodo }) {
   return (
     <div>
+      <h2><span>({todos.length} items)</span></h2>
       {todos.length === 0 ? (
         <p>Nothing to do :(</p>
       ) : (
