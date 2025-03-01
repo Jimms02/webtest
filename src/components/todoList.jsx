@@ -1,20 +1,26 @@
 import React from 'react';
+import styles from './todoList.module.css'
 
-export default function TodoList({ activities }) {
+export default function TodoList({ todos, deleteTodo }) {
   return (
     <div>
-      {activities.length === 0 ? (
+      {todos.length === 0 ? (
         <p>Nothing to do :(</p>
       ) : (
         <ul>
-          {activities.map((activity) => (
-            <li key={activity.id}>
-              <h3>{activity.activity}</h3>
-              <p><strong>Price:</strong> ${activity.price}</p>
-              <p><strong>Type:</strong> {activity.type}</p>
-              <p><strong>Booking Required:</strong> {activity.bookingRequired ? 'Yes' : 'No'}</p>
-              <p><strong>Accessibility:</strong> {activity.accessibility}</p>
-            </li>
+          {todos.map((todo) => (
+            <div key={todo.id} className={styles.itemcontainer}>
+              <li>
+                <h3>{todo.todo}</h3>
+                <p><strong>Price (RM):</strong> ${todo.price}</p>
+                <p><strong>Type:</strong> {todo.type}</p>
+                <p><strong>Booking Required:</strong> {todo.bookingRequired ? 'Yes' : 'No'}</p>
+                <p><strong>Accessibility:</strong> {todo.accessibility}</p>
+              </li>
+              <button onClick={() => deleteTodo(todo.id)}  >
+                Delete
+              </button>
+            </div>
           ))}
         </ul>
       )}

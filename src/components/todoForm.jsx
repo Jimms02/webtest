@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-export default function todoForm({ addActivity }) {
+export default function todoForm({ addTodo }) {
   const [formData, setFormData] = useState({
     activity: '',
     price: '',
@@ -28,7 +28,7 @@ export default function todoForm({ addActivity }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    addActivity({ ...formData, id: Date.now() });
+    addTodo({ ...formData, id: Date.now() });
     
     // reset form
     setFormData({
@@ -43,7 +43,7 @@ export default function todoForm({ addActivity }) {
 
   return (
     <div>
-      <h2>Add New Activity</h2>
+      <h2>Add New Todo</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="activity">Activity:</label>
